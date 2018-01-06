@@ -13,4 +13,4 @@
 
 ![alt text][logo]
 
-[logo]: https//github.com/georgercarder/qrhomology/qr.pdf 
+[logo]: https//github.com/georgercarder/qrhomology/qr.png 
