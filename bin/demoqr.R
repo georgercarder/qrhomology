@@ -3,7 +3,7 @@
 # qr codes appear in 25, 41, and 57 ^2 schemes
 # for simplicity we'll start with 25^2
 
-d=41
+d=57
 
 x<-rep(0, d^2)
 y<-rep(0, d^2)

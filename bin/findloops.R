@@ -22,8 +22,12 @@ n<-length(unique(A$label))
 z<-rep(0,nrow(df))
 
 LOOPS=0
-
+if(0 %in% unique(A$label)){
 i=0
+}else{
+i=1
+n=n+1
+}
 
 while(i<n){
 
