@@ -66,6 +66,9 @@ string<-sprintf("There are %d components", COMP)
 
 print(string)
 
+save(A,file="./var/A")
+rm(list=ls())
+
 
 
 
