@@ -34,9 +34,13 @@ while(i<n){
     miny<-min(B$y)
 
     C<-cbind(df[,1:2],z)
+    ii=1
+    nn<-nrow(B)
+    while(ii<=nn){
+    C$z[which(C$x==B$x[i]&C$y==B$y[i])]=1
+    ii=ii+1
+    }
 
-
-    C$z[which(C$x==B$x&C$y==B$y)]=1
 
     ## here we find number of z=0 components.. i.e. complement to black object
 
