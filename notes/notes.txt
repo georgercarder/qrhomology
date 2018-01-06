@@ -1,0 +1,4 @@
+
+# gives filled squares of proper size for qr
+> ggplot(A,aes(A[,1],A[,2]))+geom_point(size=8,shape=15)
+
