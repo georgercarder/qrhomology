@@ -3,26 +3,27 @@
 # qr codes appear in 25, 41, and 57 ^2 schemes
 # for simplicity we'll start with 25^2
 
+d=41
 
-x<-rep(0, 25^2)
-y<-rep(0, 25^2)
-z<-rep(0, 25^2)
+x<-rep(0, d^2)
+y<-rep(0, d^2)
+z<-rep(0, d^2)
 
 df<-data.frame(x,y,z)
 
-N=25
+N=d
+NN=d
 
 i=1
 I=1
 
-while(i<=25){
+while(i<=N){
 
-	NN=25
 	j=1
 	while(j<=NN){
 		df[I,1]=i
 		df[I,2]=j
-		df[I,3]=sample(c(0,1),1,replace=FALSE,prob=c(0.60,0.40))
+		df[I,3]=sample(c(0,1),1,replace=FALSE,prob=c(0.50,0.50))
 		I=I+1
 		j=j+1
 	}
