@@ -21,10 +21,9 @@ load("./var/df")
 A<-df[df[,3]==1,]
 
 label<-rep(0,nrow(A))
-notlabelled<-rep(1,nrow(A))
 distbin<-rep(0,nrow(A))
 used<-rep(0,nrow(A))
-A<-cbind(A,label,notlabelled,distbin,used)
+A<-cbind(A,label,distbin,used)
 
 N<-nrow(A)
 i=1
@@ -33,7 +32,7 @@ component=1
 found=0
 exhaustfind=0
 A$label[1]=component
-A$notlabelled[1]=0
+
 
 X<-A[1,]
 
