@@ -29,8 +29,8 @@ N<-nrow(A)
 i=1
 pass=1
 component=1
-found=0
-exhaustfind=0
+
+
 A$label[1]=component
 
 
