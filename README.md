@@ -11,6 +11,5 @@
 #### run ggplot(A,aes(A[,1],A[,2]))+geom_point(size=8,shape=15) to visual the code.
 ##### run source(./bin/findloops.R) some bugs
 
-![alt text][logo]
 
-[logo]: https//github.com/georgercarder/qrhomology/qr.png 
+![alt text](https//github.com/georgercarder/qrhomology/qr.png)
