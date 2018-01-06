@@ -20,19 +20,17 @@ rep.row <- function(r, n){
 
 N<-nrow(CC)
 label<-rep(0,N)
-notlabelled<-rep(1,N)
 distbin<-rep(0,N)
 used<-rep(0,N)
-CC<-cbind(CC,label,notlabelled,distbin,used)
+CC<-cbind(CC,label,distbin,used)
 
 
 
 pass=1
 component=1
-found=0
-exhaustfind=0
+
 CC$label[1]=component
-CC$notlabelled[1]=0
+
 
 X<-CC[1,]
 
