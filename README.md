@@ -12,4 +12,4 @@
 ##### run source(./bin/findloops.R) some bugs
 
 
-![alt text](https//github.com/georgercarder/qrhomology/qr.png)
+![alt text](https//github.com/georgercarder/qrhomology/qr-1.png)
