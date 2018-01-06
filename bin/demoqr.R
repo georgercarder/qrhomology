@@ -8,7 +8,7 @@ x<-rep(0, 25^2)
 y<-rep(0, 25^2)
 z<-rep(0, 25^2)
 
-df<-data.frame(x,y)
+df<-data.frame(x,y,z)
 
 N=25
 
@@ -22,7 +22,7 @@ while(i<=25){
 	while(j<=NN){
 		df[I,1]=i
 		df[I,2]=j
-		df[I,3]=sample(c(0,1),1,replace=FALSE,prob=NULL)
+		df[I,3]=sample(c(0,1),1,replace=FALSE,prob=c(0.60,0.40))
 		I=I+1
 		j=j+1
 	}
@@ -30,6 +30,8 @@ while(i<=25){
 print(i)
 i=i+1
 }
+
+
 
 save(df,file="./var/df")
 rm(list=ls())	
