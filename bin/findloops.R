@@ -4,6 +4,9 @@
 # we have labelled and counted components with findcomponents
 # now we find the generators of the homology groups
 
+
+# NEED TO WORK OUT WHAT HAPPENS AT BOUNDARY
+
 # functions
 dist<-function(x,y){return(sqrt(sum((x-y)^2)))}
 
@@ -25,14 +28,20 @@ i=0
 while(i<n){
 
     B<-A[A$label==i,]
+    maxx<-max(B$x)
+    maxy<-max(B$y)
+    minx<-min(B$x)
+    miny<-min(B$y)
 
     C<-cbind(df[,1:2],z)
+
 
     C$z[which(C$x==B$x&C$y==B$y)]=1
 
     ## here we find number of z=0 components.. i.e. complement to black object
 
-        CC<-C[C$z==0,]
+        CC<-C[C$z==0&(C$x %in% (minx-1):(maxx+1))&(C$y %in% (miny-1):(miny+1)),]
+
 
             ## input is CC
             source("./bin/findwhitecomponents.R")
