@@ -8,7 +8,6 @@
 # NEED TO WORK OUT WHAT HAPPENS AT BOUNDARY
 
 # functions
-dist<-function(x,y){return(sqrt(sum((x-y)^2)))}
 
 library(plyr)
 rep.row <- function(r, n){

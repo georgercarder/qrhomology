@@ -6,7 +6,6 @@
 # for which we are taking inventory of the components
 
 # functions
-dist<-function(x,y){return(sqrt(sum((x-y)^2)))}
 
 library(plyr)
 rep.row <- function(r, n){

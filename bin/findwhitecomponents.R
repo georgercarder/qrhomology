@@ -8,7 +8,6 @@
 # note this is the dual to findcomponents.R
 
 # functions
-dist<-function(x,y){return(sqrt(sum((x-y)^2)))}
 
 library(plyr)
 rep.row <- function(r, n){
