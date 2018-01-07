@@ -23,7 +23,7 @@ while(i<=N){
 	while(j<=NN){
 		df[I,1]=i
 		df[I,2]=j
-		df[I,3]=sample(c(0,1),1,replace=FALSE,prob=c(0.50,0.50))
+		df[I,3]=sample(c(0,1),1,replace=FALSE,prob=NULL)
 		I=I+1
 		j=j+1
 	}
