@@ -22,41 +22,41 @@ z<-rep(0,nrow(df))
 
 LOOPS=0
 if(0 %in% unique(A$label)){
-i=0
+  i=0
 }else{
-i=1
+  i=1
 n=n+1
 }
 
 while(i<n){
 
-    B<-A[A$label==i,]
-    maxx<-max(B$x)
-    maxy<-max(B$y)
-    minx<-min(B$x)
-    miny<-min(B$y)
+  B<-A[A$label==i,]
+  maxx<-max(B$x)
+  maxy<-max(B$y)
+  minx<-min(B$x)
+  miny<-min(B$y)
 
-    C<-cbind(df[,1:2],z)
-    ii=1
-    nn<-nrow(B)
-    while(ii<=nn){
+  C<-cbind(df[,1:2],z)
+  ii=1
+  nn<-nrow(B)
+  while(ii<=nn){
     C$z[which(C$x==B$x[i]&C$y==B$y[i])]=1
-    ii=ii+1
-    }
+  ii=ii+1
+  }
 
 
-    ## here we find number of z=0 components.. i.e. complement to black object
+  ## here we find number of z=0 components.. i.e. complement to black object
 
-        CC<-C[C$z==0&(C$x %in% (minx-1):(maxx+1))&(C$y %in% (miny-1):(miny+1)),]
+    CC<-C[C$z==0&(C$x %in% (minx-1):(maxx+1))&(C$y %in% (miny-1):(miny+1)),]
 
 
-            ## input is CC
-            source("./bin/findwhitecomponents.R")
-            ## output is COMP
-        
+      ## input is CC
+      source("./bin/findwhitecomponents.R")
+      ## output is COMP
+    
 
-    ##
-    LOOPS=LOOPS+(COMP-1)
+  ##
+  LOOPS=LOOPS+(COMP-1)
 
 
 print(i)

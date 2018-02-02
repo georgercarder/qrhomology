@@ -19,14 +19,14 @@ I=1
 
 while(i<=N){
 
-	j=1
-	while(j<=NN){
-		df[I,1]=i
-		df[I,2]=j
-		df[I,3]=sample(c(0,1),1,replace=FALSE,prob=NULL)
-		I=I+1
-		j=j+1
-	}
+  j=1
+  while(j<=NN){
+    df[I,1]=i
+    df[I,2]=j
+    df[I,3]=sample(c(0,1),1,replace=FALSE,prob=c(.30,.70))
+    I=I+1
+    j=j+1
+  }
 
 print(i)
 i=i+1
@@ -35,4 +35,4 @@ i=i+1
 
 
 save(df,file="./var/df")
-rm(list=ls())	
+rm(list=ls())  

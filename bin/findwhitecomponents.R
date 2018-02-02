@@ -35,21 +35,21 @@ X<-CC[1,]
 
 while(sum(CC$used)<(N-1)){
 
-	
+  
 
-	CC$distbin<-sqrt(rowSums((CC[,1:2]-(rep.row(X[,1:2],N)))^2))	
+  CC$distbin<-sqrt(rowSums((CC[,1:2]-(rep.row(X[,1:2],N)))^2))  
 
-	CC$label[CC$distbin==1]=X$label
+  CC$label[CC$distbin==1]=X$label
     
-    CC$used[which(CC$x==X$x&CC$y==X$y)]=1
-	
-    if(nrow(head(CC[CC$used==0&CC$label==X$label,],1))!=0){
+  CC$used[which(CC$x==X$x&CC$y==X$y)]=1
+  
+  if(nrow(head(CC[CC$used==0&CC$label==X$label,],1))!=0){
     X<-head(CC[CC$used==0&CC$label==X$label,],1)
-    }else{
+  }else{
     X<-head(CC[CC$used==0,],1)
     component=component+1
     X$label=component
-    }
+  }
 
 
 print(pass)
