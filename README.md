@@ -1,7 +1,7 @@
 # QR homology project
 ## computing the homology of a qr code.
 #### goals:
-##### 1. first do 'mock-up' in R
+##### 1. Construct 'mock-up' in R
 ##### 2. Generalize for higher dimensional QR codes.
 
 ## Steps.
