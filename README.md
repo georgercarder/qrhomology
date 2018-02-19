@@ -2,8 +2,7 @@
 ## computing the homology of a qr code.
 #### goals:
 ##### 1. first do 'mock-up' in R
-##### 2. Implement in Java
-##### 3. Generalize for higher dimensional QR codes.
+##### 2. Generalize for higher dimensional QR codes.
 
 ## Steps.
 #### run source("./bin/demoqr.R") to build qr code
